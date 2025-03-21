@@ -1,2 +1,2 @@
 # Roomly
-Book you place 
+Book your place 
