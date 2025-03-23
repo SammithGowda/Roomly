@@ -1,0 +1,17 @@
+# Ignore environment files
+.env
+client/.env.local
+client/.env.development
+client/.env.production
+server/.env
+
+
+# Ignore build and dependency folders
+**/node_modules/
+**/dist/
+client/.next/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.vscode/
