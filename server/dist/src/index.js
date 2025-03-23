@@ -14,9 +14,9 @@ const morgan_1 = __importDefault(require("morgan"));
 const tenantRoutes_1 = __importDefault(require("./routes/tenantRoutes"));
 const authMiddleware_1 = require("./middleware/authMiddleware");
 const managerRoutes_1 = __importDefault(require("./routes/managerRoutes"));
-// import propertyRoutes from "./routes/propertyRoutes";
-// import leaseRoutes from "./routes/leaseRoutes";
-// import applicationRoutes from "./routes/applicationRoutes";
+const propertyRoutes_1 = __importDefault(require("./routes/propertyRoutes"));
+const leaseRoutes_1 = __importDefault(require("./routes/leaseRoutes"));
+const applicationRoutes_1 = __importDefault(require("./routes/applicationRoutes"));
 /* CONFIGURATIONS */
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -31,9 +31,9 @@ app.use((0, cors_1.default)());
 app.get("/", (req, res) => {
     res.send("Hi sammith! This is home route");
 });
-// app.use("/applications", applicationRoutes);
-// app.use("/properties", propertyRoutes);
-// app.use("/leases", leaseRoutes);
+app.use("/applications", applicationRoutes_1.default);
+app.use("/properties", propertyRoutes_1.default);
+app.use("/leases", leaseRoutes_1.default);
 app.use("/tenants", (0, authMiddleware_1.authMiddleware)(["tenant"]), tenantRoutes_1.default);
 app.use("/managers", (0, authMiddleware_1.authMiddleware)(["manager"]), managerRoutes_1.default);
 /* SERVER */
