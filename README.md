@@ -6,7 +6,7 @@ Book your place
 This is a **full-stack real estate booking application** that allows users to browse, book, and manage rental properties. The platform provides a seamless experience for both property owners and renters.  
 
 ## 🏗️ Tech Stack  
-- **Frontend:** Next.js (React & TypeScript), **ShadCN UI**, Tailwind CSS  
+- **Frontend:** Next.js (React & TypeScript),ShadCN UI, Tailwind CSS  
 - **Backend:** Node.js, Express.js  
 - **Database:** PostgreSQL (hosted on AWS RDS)  
 - **Authentication:** **AWS Cognito** (secure user authentication)  
